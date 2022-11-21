@@ -1,19 +1,11 @@
+import React from "react";
+import "./styles.css";
+import Todo from "./components/todo";
 
-import './styles.css';
-import List from './components/List/List';
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Vivian's Food Wish List</h1>
-      </header>
-      <body>
-        <List />
-      </body>
-       
-    </div>
+    <main>
+      <Todo />
+    </main>
   );
 }
-
-export default App;
