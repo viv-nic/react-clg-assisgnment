@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-// import Checkbox from "./checkbox";
+import Checkbox from "./checkbox";
 
 const Todo = () => {
     //set initial state
@@ -41,10 +41,10 @@ const Todo = () => {
 
     };
 
-    const handleClick = (e) => {
-        e.preventDefault();
-        handleToggle(e.currentTarget.id);
-    };
+    // const handleClick = (e) => {
+    //     e.preventDefault();
+    //     handleToggle(e.currentTarget.id);
+    // };
 
     return (
         <div className="App">
@@ -81,14 +81,16 @@ const Todo = () => {
                 <p>{t.taskDescription}</p>
                 </strike>
             ) : (
-                // <Checkbox 
-                //     label={t.taskDescription}
-                //     value={t.id}
-                //     checked={t.isCompleted}
-                //     onChange={(e) => handleToggle(t.id)}
-                // />
                 <>
-                <p>{t.taskDescription}</p>
+                <Checkbox 
+                    label={t.taskDescription}
+                    value={t.id}
+                    checked={t.isCompleted}
+                    onChange={(e) => handleToggle(t.id)}
+                />
+                
+                
+                {/* <p>{t.taskDescription}</p>
                 <button
                     id={t.id}
                     key={index + t.id}
@@ -96,7 +98,7 @@ const Todo = () => {
                     onClick={handleClick}
                 >
                     complete
-                </button>
+                </button> */}
                 
                 </>
                 
