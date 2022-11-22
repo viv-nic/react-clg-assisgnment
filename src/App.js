@@ -1,20 +1,11 @@
-// import React from "react";
-import "./App.css";
-// import Todo from "./components/todo";
-import { Route } from "react-router-dom";
+import React from "react";
+import "./styles.css";
+import Todo from "./components/todo";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Route path="/home">
-        Home
-      </Route>
-      <Route path="/about">
-        About
-      </Route>
-     
-    </div>
+    <main>
+      <Todo />
+    </main>
   );
 }
-
-export default App;
